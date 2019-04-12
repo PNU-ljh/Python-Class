@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Item List</h1>
+
+            <table class="table table-bordered table-hover">
+            {% for item in item_list %}
+                <tr>
+                    <td>
+                        {# todo #}
+                        <a href="/shop/{{ item.pk }}/">{{ item.name }}</a>
+                    </td>
+                    <td>{{ item.desc }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.created_at }}</td>
+                    <td>{{ item.updated_at }}</td>
+                </tr>
+            {% endfor %}
+            </table>
+
+            <a href="#" class="btn btn-primary">New Item</a>
+        </div>
+    </div>
+</div>
